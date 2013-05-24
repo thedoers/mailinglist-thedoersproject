@@ -1,0 +1,402 @@
+
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent;border:0}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}input,textarea{padding:0;margin:0}:focus{outline:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
+@font-face{font-family:'ApexSerifLightItalic';src:url(http://828e0c400422fe50bc7e-7be679aa2a7311928854f3608dc0ea8e.r42.cf2.rackcdn.com/wp-content/themes/imbalance/fonts/'apexserif_lightitalic-webfont.eot');src:url(http://828e0c400422fe50bc7e-7be679aa2a7311928854f3608dc0ea8e.r42.cf2.rackcdn.com/wp-content/themes/imbalance/fonts/'apexserif_lightitalic-webfont.eot?#iefix') format('embedded-opentype'),url(http://828e0c400422fe50bc7e-7be679aa2a7311928854f3608dc0ea8e.r42.cf2.rackcdn.com/wp-content/themes/imbalance/fonts/'apexserif_lightitalic-webfont.woff') format('woff'),url(http://828e0c400422fe50bc7e-7be679aa2a7311928854f3608dc0ea8e.r42.cf2.rackcdn.com/wp-content/themes/imbalance/fonts/'apexserif_lightitalic-webfont.ttf') format('truetype'),url(http://828e0c400422fe50bc7e-7be679aa2a7311928854f3608dc0ea8e.r42.cf2.rackcdn.com/wp-content/themes/imbalance/fonts/'apexserif_lightitalic-webfont.svg#ApexSerifLightItalic') format('svg');font-weight:lighter;font-style:italic}@font-face{font-family:'TitilliumText22LThin';src:url(http://828e0c400422fe50bc7e-7be679aa2a7311928854f3608dc0ea8e.r42.cf2.rackcdn.com/wp-content/themes/imbalance/fonts/'titilliumtext22l001-webfont.eot');src:url(http://828e0c400422fe50bc7e-7be679aa2a7311928854f3608dc0ea8e.r42.cf2.rackcdn.com/wp-content/themes/imbalance/fonts/'titilliumtext22l001-webfont.eot?#iefix') format('embedded-opentype'),url(http://828e0c400422fe50bc7e-7be679aa2a7311928854f3608dc0ea8e.r42.cf2.rackcdn.com/wp-content/themes/imbalance/fonts/'titilliumtext22l001-webfont.woff') format('woff'),url(http://828e0c400422fe50bc7e-7be679aa2a7311928854f3608dc0ea8e.r42.cf2.rackcdn.com/wp-content/themes/imbalance/fonts/'titilliumtext22l001-webfont.ttf') format('truetype'),url(http://828e0c400422fe50bc7e-7be679aa2a7311928854f3608dc0ea8e.r42.cf2.rackcdn.com/wp-content/themes/imbalance/fonts/'titilliumtext22l001-webfont.svg#TitilliumText22LThin') format('svg');font-weight:lighter;font-style:normal}@font-face{font-family:'TitilliumText22LThin';src:url(http://828e0c400422fe50bc7e-7be679aa2a7311928854f3608dc0ea8e.r42.cf2.rackcdn.com/wp-content/themes/imbalance/fonts/'titilliumtext22l004-webfont.eot');src:url(http://828e0c400422fe50bc7e-7be679aa2a7311928854f3608dc0ea8e.r42.cf2.rackcdn.com/wp-content/themes/imbalance/fonts/'titilliumtext22l004-webfont.eot?#iefix') format('embedded-opentype'),url(http://828e0c400422fe50bc7e-7be679aa2a7311928854f3608dc0ea8e.r42.cf2.rackcdn.com/wp-content/themes/imbalance/fonts/'titilliumtext22l004-webfont.woff') format('woff'),url(http://828e0c400422fe50bc7e-7be679aa2a7311928854f3608dc0ea8e.r42.cf2.rackcdn.com/wp-content/themes/imbalance/fonts/'titilliumtext22l004-webfont.ttf') format('truetype'),url(http://828e0c400422fe50bc7e-7be679aa2a7311928854f3608dc0ea8e.r42.cf2.rackcdn.com/wp-content/themes/imbalance/fonts/'titilliumtext22l004-webfont.svg#TitilliumText22LMedium') format('svg');font-weight:bold;font-style:normal}@font-face{font-family:'LinotypeDidotItalic';src:url(http://828e0c400422fe50bc7e-7be679aa2a7311928854f3608dc0ea8e.r42.cf2.rackcdn.com/wp-content/themes/imbalance/fonts/'01322_didotlhi-webfont.eot');src:url(http://828e0c400422fe50bc7e-7be679aa2a7311928854f3608dc0ea8e.r42.cf2.rackcdn.com/wp-content/themes/imbalance/fonts/'01322_didotlhi-webfont.eot?#iefix') format('embedded-opentype'),url(http://828e0c400422fe50bc7e-7be679aa2a7311928854f3608dc0ea8e.r42.cf2.rackcdn.com/wp-content/themes/imbalance/fonts/'01322_didotlhi-webfont.woff') format('woff'),url(http://828e0c400422fe50bc7e-7be679aa2a7311928854f3608dc0ea8e.r42.cf2.rackcdn.com/wp-content/themes/imbalance/fonts/'01322_didotlhi-webfont.ttf') format('truetype'),url(http://828e0c400422fe50bc7e-7be679aa2a7311928854f3608dc0ea8e.r42.cf2.rackcdn.com/wp-content/themes/imbalance/fonts/'01322_didotlhi-webfont.svg#LinotypeDidotItalic') format('svg');font-weight:normal;font-style:italic}
+body{background-color:#FFF;line-height:19px}::selection{background:#000;color:#e5e5e5}a:link,a:visited{color:#000;text-decoration:underline}a:hover{text-decoration:none}#outer{font-family:Arial,Helvetica,sans-serif;color:#000;font-size:12px;width:945px;margin:0 auto}p{margin-bottom:15px!important;font-family:TitilliumText22LThin;font-size:1.25em}blockquote{font-style:italic!important;margin-left:70px!important}table{border-collapse:separate;border-spacing:0}table,td,th{vertical-align:middle}table{margin-bottom:1.4em;width:100%}th{font-weight:bold}thead th{background:#ff3706}th,td,caption{padding:4px 10px 4px 5px}tr.even td{background:#ff3706}tfoot{font-style:italic}td#next{text-align:right}caption{background:none repeat scroll 0 0 #eee}th,td,caption{padding:4px 10px 4px 5px}caption,th,td{font-weight:strong;text-align:left}#top{height:120px;margin-left:-61px;padding-bottom:17px;padding-top:40px}#logo{height:120px;width:364px;float:left}#logo a{display:block;height:120px;width:364px}.twitter-follow-button{float:right}#menu{height:50px;border-bottom:solid 1px #eee}#menu #navicons{width:237px;height:50px;float:right}#menu #navicons li{float:right}#menu #navicons a{height:50px;line-height:50px;padding-left:20px;background-image:url(http://828e0c400422fe50bc7e-7be679aa2a7311928854f3608dc0ea8e.r42.cf2.rackcdn.com/wp-content/themes/imbalance/images/top-icons.png);background-attachment:scroll;background-repeat:no-repeat;margin:0 7px;text-decoration:none!important;font-size:11px;display:block}#menu #navicons a:hover{background-image:url(http://828e0c400422fe50bc7e-7be679aa2a7311928854f3608dc0ea8e.r42.cf2.rackcdn.com/wp-content/themes/imbalance/images/top-icons-hover.png)}#menu #navicons a#subscribe{background-position:left 19px}#menu #navicons a#twitter{background-position:left -19px}#menu #navicons a#facebook{background-position:left -58px}.cats{padding-left:10px}.cats li{float:left;line-height:50px;margin-right:25px}.cats li a{font-family:ApexSerifLightItalic;font-size:17px;font-weight:lighter;font-style:italic;text-transform:uppercase;color:#000;float:left;line-height:50px;text-decoration:none!important}.cats li a:hover,.cats li a.active{border-bottom:solid 1px #000}#projects,#team,#search{width:945px;overflow:hidden;padding:0;border-bottom:solid 1px #000}#projects ul li{font-size:12px;font-family:TitilliumText22LThin;margin-bottom:3px;float:left;width:305px;padding:0;line-height:20px;height:20px}#projects ul li a{text-decoration:none!important;display:block;width:305px;height:20px;background-color:#fff;padding:0 10px}#projects ul li a span,#team ul li a span{float:right}#projects ul li a:hover,#team ul li a span{background-color:#000;color:#e5e5e5}.status{position:absolute;display:block;top:-5px;z-index:999;left:202px}.outside{padding:0 10px 0 10px;background-color:#000}.outside a,.outside a:visited{color:#e5e5e5!important}.outside a:hover{text-decoration:none;border-bottom:solid 1px #000}#main{margin-top:12px;margin-bottom:35px}#error{font-size:21px;font-weight:normal;line-height:1.2;margin:15px 15px 45px 15px}.li_container{padding-top:30px}#projects .li_container,#team .li_container{padding-top:0}li.article{margin-bottom:15px;position:relative;display:none}.li_cont1,.li_cont2{margin-right:15px}.mcol2{margin-top:15px;margin-bottom:15px}.article ul,.article ol{margin-bottom:15px;list-style:square inside none}.single .article{float:left;width:65%;margin-bottom:35px;max-width:635px}.spacer{margin-top:75px}.border{padding-bottom:12px;border-bottom:solid 1px #000}.single .title{float:left;width:67%}.single .articlehead{margin-top:75px;margin-bottom:35px;clear:both}.single .info{float:right;max-width:305px}.single .side{float:right;margin-bottom:35px;width:20%;min-width:310px;position:relative}.side .info{width:276px;background-color:#f2f2f2;float:left;padding:35px 15px 15px 15px;-webkit-border-bottom-left-radius:20px;-moz-border-radius-bottomleft:20px;border-top-right-radius:20px;border-bottom-left-radius:20px}#related_projects{margin-top:35px}.single .article ul,.single .article ol{margin-bottom:20px;margin-left:10.9347%;margin-right:12.522%;margin-top:2.5em;list-style:square inside none;font-family:TitilliumText22LThin;font-size:14px}.single .article ul li,.single .article ol{padding-bottom:1.25em}.single .article ul ul,.single .article ol ol,.single .article ul ul ul,.single .article ol ol ol{margin-bottom:1.25em;margin-left:1.25em;margin-right:2.5em;list-style:square inside none}#tags{margin-top:1.875em}.article ul{list-style:square inside none}.article ul ul,.article ul ul ul{margin-left:15px;margin-right:30px}.article ol{list-style-type:decimal}li.article .postmetadata{color:#555;font-size:11px;margin-top:20px}li.article .postmetadata a{color:#ff3706!important}li.article h2{font-family:ApexSerifLightItalic;font-size:30px;text-transform:uppercase;line-height:1;margin-bottom:50px;font-weight:lighter;font-style:italic}li.article h2 a{text-decoration:none!important}.preview{width:305px;position:relative}.article-over{background:#000;color:#e5e5e5;position:absolute;left:0;top:0;right:0;padding-top:40px;padding-bottom:40px;padding-left:15px;padding-right:60px;height:100%}.article-over a{color:#e5e5e5;text-decoration:none}.article-over p{font-size:16px}#sidebar ul,#sidebar ol{margin-left:0}#sidebar .article:hover img{filter:alpha(opacity=10);opacity:.1}#sidebar .article{margin:0;padding-bottom:0!important}#sidebar .article p{margin:0}#sidebar .article-over{margin:0;width:275px}#sidebar .article-over .postmetadata{margin:0;border-bottom:0;padding-left:0!important}#sidebar .article h2{font-size:21px;font-weight:normal;line-height:1.2;margin-bottom:15px}#sidebar .article:hover img{filter:alpha(opacity=10);opacity:.1}#sidebar #recent-posts li a{text-decoration:none!important;border-bottom:1px solid #ff3706;text-decoration:none}#sidebar #recent-posts li,#sidebar #get-recent-comments li{margin-bottom:10px}#sidebar li li{padding:0;border:0}#sidebar .post-date{font-size:11px;color:#555}#sidebar #get-recent-comments a{text-decoration:none!important;font-weight:bold;border-bottom:1px solid #ff3706;text-decoration:none}h1{font-size:23px;font-weight:normal;font-style:italic;font-family:LinotypeDidotItalic;margin-top:15px;margin-bottom:-15px}.single h1,#about h1{font-size:4.083em;font-family:LinotypeDidotItalic;font-style:italic;text-transform:uppercase;margin-bottom:35px}.single h2,#about h2{max-width:32.8%;font-size:2em;font-family:ApexSerifLightItalic;font-style:italic;font-weight:lighter;text-transform:uppercase;line-height:1.1em;margin-bottom:2.5em}.single .link{height:54px;-webkit-border-top-right-radius:20px;-webkit-border-bottom-left-radius:20px;-moz-border-radius-topright:20px;-moz-border-radius-bottomleft:20px;border-top-right-radius:20px;border-bottom-left-radius:20px;background-color:#000;text-align:center}#main h3 a{color:#e5e5e5;font-size:22px;font-family:ApexSerifLightItalic;font-style:italic;font-weight:bold;text-transform:uppercase;line-height:54px}#main h3 a:hover,.single h3{color:#000}.single .article h2,.single .article h3,.single .article h4,.single .article h5,.single .article h6{margin-left:30px;clear:both}.single .article h2{font-size:20px;font-weight:normal;padding-bottom:13px;clear:both}.single .article h3{font-size:17px;font-weight:normal;padding-bottom:11px;clear:both}.single .identifer{width:939px;height:80px;margin-left:3px;margin-right:3px}.single .article p{margin-bottom:15px;margin-right:12.522%}.single .article a{font-weight:bold;font-size:inherit!important}.article h5{float:left;width:145px;font-size:11px;color:#555;font-weight:normal}#main .postmetadata{width:305px;font-size:11px;color:#555;margin-top:35px}#main h4{font-size:1.417em;font-family:ApexSerifLightItalic;font-style:italic;font-weight:lighter;text-transform:uppercase;margin-bottom:5px}#main a{font-family:TitilliumText22LThin;font-size:1.25em;text-decoration:none;border-bottom:1px solid #e5e5e5}#main a:hover{border-bottom:1px solid #000}.single .article .postmetadata{width:auto;padding-left:160px;float:none;padding-bottom:15px}.side ul li{margin-top:4px}.postmetadata a,.info a{font-weight:lighter}.info h3 a{border-bottom:none!important}.info h3 a:hover,.info h3 a:visited{color:#ff398a!important}.info h1{font-size:2em;font-family:ApexSerifLightItalic;font-style:italic;font-weight:lighter;text-transform:uppercase;line-height:1.1em}#searchform #s{border:0;padding:18px 10px 16px;font-size:23px;font-family:TitilliumText22LThin;font-weight:normal;color:#555;border:solid 1px #EEE;margin:15px 0;width:923px}#searchform #s:focus,#searchform #s:hover{border:solid 1px #000}#searchform #searchsubmit{border:0;background-color:#eee;height:40px;line-height:40px;padding:0 10px;cursor:pointer}#searchform #searchsubmit:hover{background-color:#ff3706;color:#FFF}#comments{margin-top:35px;border-top:1px solid #EEE;margin-left:30px;clear:both;width:580px}#comments a{font-weight:bold}#comments h3{font-size:16px}li.comment{border:solid 1px #eee;margin:15px 0;padding:10px;overflow:hidden;word-wrap:break-word}.avatar{float:left;width:55px;height:55px;padding-right:10px}.comment-body em{font-style:italic;font-weight:bold}.comment-author{font-size:11px;color:#555;margin-bottom:5px}.comment-author a{color:#ff3706!important;text-decoration:none}.comment p{margin-left:65px;padding-top:5px;padding-right:5px}#commentform{margin-top:15px}#respond{padding-bottom:15px;width:100%}#respond textarea{border:solid 1px #eee;padding:5px 10px;margin-top:15px;margin-bottom:15px;width:96%}.login{font-family:TitilliumText22LThin;font-weight:lighter;font-size:12px;float:right;font-size:11px}#author,#email,#url{float:left;padding:18px 10px 16px;width:90px;border:solid 1px #eee}#author:focus,#email:focus,#url:focus,#respond textarea:focus{border:solid 1px #000}#author,#email{margin-right:6px}#submit{border:0;background-color:#eee;height:40px;line-height:40px;padding:0 10px;cursor:pointer}#submit:hover{background-color:#ff3706;color:#FFF}#nav{height:49px;margin-top:-1px}#nav #navright a{line-height:49px;float:right;padding:0 10px;text-decoration:none!important;color:#000!important}#nav #navleft a{line-height:49px;float:left;padding:0 10px;text-decoration:none!important;color:#000!important}.wp-pagenavi a,.wp-pagenavi span{line-height:25px;padding:5px 7px;margin-right:3px}.wp-pagenavi .current{border-bottom:solid 1px #ff3706}.wp-pagenavi a{color:#555;text-decoration:none!important}.wp-pagenavi a:hover{color:#555;border-bottom:solid 1px #ff3706}.nextpostslink,.previouspostslink{display:none}#footer{height:55px;padding:25px 10px 0;border-top:solid 1px #eee;clear:both}#footer a:link,#footer a:visited{text-decoration:none;border-bottom:solid 1px #ff3706}#footer #copyright{float:left}#footer #credits{float:right}.entry-content img{margin:0 0 1.5em 0}.alignleft,img.alignleft{margin-right:1.5em;display:inline;float:left}.alignright,img.alignright{margin-left:1.5em;display:inline;float:right}.aligncenter,img.aligncenter{margin-right:auto;margin-left:auto;display:block;clear:both}.wp-caption{margin-bottom:1.5em;text-align:center;padding-top:5px}.wp-caption img{border:0 none;padding:0;margin:0}.wp-caption p.wp-caption-text{line-height:1.5;font-size:10px;margin:0;font-style:italic}.wp-smiley{margin:0!important;max-height:1em}blockquote.left{margin-right:20px;text-align:right;margin-left:0;width:33%;float:left}blockquote.right{margin-left:20px;text-align:left;margin-right:0;width:33%;float:right}.entry{clear:both}.gallery{clear:both}.gallery,.video{margin-left:30px;width:580px}.video,.identifer,.preview{-webkit-box-shadow:0 1px 5px 0 #4a4a4a;-moz-box-shadow:0 1px 5px 0 #4a4a4a;box-shadow:0 1px 5px 0 #4a4a4a}.page .article{width:100%!important}.clients{width:50%;margin:6px 12.522% 6px 0;padding:6px 0 6px 0;background-color:#f3f3f3}.client{padding-top:6px;padding-left:12px}.clients a{padding-top:6px;margin-left:12px}.single .role{margin:12px 0 0 0!important;padding:0!important}.single .period{margin:12px 0 35px 0!important}.single .subtitle{font-family:LinotypeDidotItalic!important;margin-left:0!important;text-transform:none!important}.hrtitle{width:20%;border-bottom:solid 1px #bfbfbf;margin-top:12px}.hrclients{width:50%;border-bottom:solid 1px #000}.white{margin-bottom:35px}#twitter_update_list a{color:#ff3706;text-decoration:none;display:inline}#twitter_update_list li{margin-bottom:25px}li#twitter.widget{padding-bottom:30px}.follow{margin-bottom:25px;clear:both}.follow a{background:url(http://828e0c400422fe50bc7e-7be679aa2a7311928854f3608dc0ea8e.r42.cf2.rackcdn.com/wp-content/themes/imbalance/"images/larry-shadowed-big.png") no-repeat 6px 3px #fff;border:1px solid #ff3706;color:#ff3706;text-decoration:none;margin-top:15px;font-weight:bold;font-size:12px;padding:10px;padding-left:50px}.follow a:hover{background-color:#ff3706;border:1px solid #ff3706;color:#fff}.attachment img{display:block;margin:0 auto}#nav-below .nav-previous{display:block;float:left;margin-left:160px}#nav-below .nav-next{display:block;float:right}.attachment #comments{clear:both}.attachment #respond{margin-top:15px}#team li{clear:left;float:left;margin-bottom:15px;position:relative}#team img.photo{width:96px;height:96px}#team div.authname{margin:1.587% 0 0 1.587%;float:left}#team ul li a{text-decoration:none!important;font-size:1.167em;font-family:ApexSerifLightItalic;line-height:1.417em;font-style:italic;text-transform:uppercase;width:305px;display:block}#team ul li p{font-size:1em}#team ul li{margin-bottom:.938em;float:left;width:305px;padding:0}.member{width:305px;height:96px;position:relative}.member-over{opacity:0;filter:alpha(opacity=0);color:#e5e5e5;position:absolute;left:0;top:0;height:96px;width:96px;background:url(http://828e0c400422fe50bc7e-7be679aa2a7311928854f3608dc0ea8e.r42.cf2.rackcdn.com/wp-content/themes/imbalance/"images/asterisco.png") no-repeat 10px 10px #000}.member-over a{color:#e5e5e5;text-decoration:none}.member-over p{font-size:1.083em;text-transform:uppercase;font-family:ApexSerifLightItalic;font-style:italic;padding-top:38px;padding-bottom:10px;padding-left:10px;padding-right:10px}#about .side{float:left;width:65.60%}#about{clear:both}#about h2{float:left}#about .cats{clear:both;height:50px;border-bottom:solid 1px #eee}.socials a{border-bottom:none!important}#gotop{float:right}.link_block{width:96px;height:96px;display:block;position:absolute}
+#categories ul li a span,#archives ul li a span{float:right;position:absolute;margin-top:-3px;padding-left:25px}.photogalleria{margin-bottom:20px!important}.attachment #respond textarea{overflow:hidden}
+#menu #navicons{width:290px}#menu #navicons a{float:left}li.comment{zoom:1}.preview{overflow:hidden}#author,#email,#url{float:none;width:123px}#respond textarea{width:440px}#main{zoom:1}#categories,#archives{position:relative}#categories ul li a,#archives ul li a{position:relative}#categories ul li a span,#archives ul li a span{position:absolute;top:0;right:0}#categories ul li,#categories ul li a{width:283px}#form>commentform input#author,#form>commentform input#email{margin-right:0!important}
+/*
+Skin Name: Nivo Slider Default Theme
+Skin URI: http://nivo.dev7studios.com
+Skin Type: flexible
+Description: The default skin for the Nivo Slider.
+Version: 1.0
+Author: Gilbert Pellegrom
+Author URI: http://dev7studios.com
+*/
+
+.theme-default .nivoSlider {
+	position:relative;
+	background:#fff url(http://828e0c400422fe50bc7e-7be679aa2a7311928854f3608dc0ea8e.r42.cf2.rackcdn.com/wp-content/plugins/nivo-slider/scripts/nivo-slider/themes/default/loading.gif) no-repeat 50% 50%;
+    margin-bottom:50px;
+    -webkit-box-shadow: 0px 1px 5px 0px #4a4a4a;
+    -moz-box-shadow: 0px 1px 5px 0px #4a4a4a;
+    box-shadow: 0px 1px 5px 0px #4a4a4a;
+}
+.theme-default .nivoSlider img {
+	position:absolute;
+	top:0px;
+	left:0px;
+	display:none;
+}
+.theme-default .nivoSlider a {
+	border:0;
+	display:block;
+}
+
+.theme-default .nivo-controlNav {
+	position:absolute;
+	left:50%;
+	bottom:-42px;
+    margin-left:-40px; /* Tweak this to center bullets */
+}
+.theme-default .nivo-controlNav a {
+	display:block;
+	width:22px;
+	height:22px;
+	background:url(http://828e0c400422fe50bc7e-7be679aa2a7311928854f3608dc0ea8e.r42.cf2.rackcdn.com/wp-content/plugins/nivo-slider/scripts/nivo-slider/themes/default/bullets.png) no-repeat;
+	text-indent:-9999px;
+	border:0;
+	margin-right:3px;
+	float:left;
+}
+.theme-default .nivo-controlNav a.active {
+	background-position:0 -22px;
+}
+
+.theme-default .nivo-directionNav a {
+	display:block;
+	width:30px;
+	height:30px;
+	background:url(http://828e0c400422fe50bc7e-7be679aa2a7311928854f3608dc0ea8e.r42.cf2.rackcdn.com/wp-content/plugins/nivo-slider/scripts/nivo-slider/themes/default/arrows.png) no-repeat;
+	text-indent:-9999px;
+	border:0;
+}
+.theme-default a.nivo-nextNav {
+	background-position:-30px 0;
+	right:15px;
+}
+.theme-default a.nivo-prevNav {
+	left:15px;
+}
+
+.theme-default .nivo-caption {
+    font-family: Helvetica, Arial, sans-serif;
+}
+.theme-default .nivo-caption a {
+    color:#fff;
+    border-bottom:1px dotted #fff;
+}
+.theme-default .nivo-caption a:hover {
+    color:#fff;
+}
+
+.theme-default.controlnav-thumbs .nivoSlider {
+    margin-bottom:100px; /* Tweak this to push content down */
+}
+.theme-default.controlnav-thumbs .nivo-controlNav {
+	position:absolute;
+	left:0px;
+	bottom:-80px; /* Tweak this to push thumbnails down */
+    margin:0;
+}
+.theme-default.controlnav-thumbs .nivo-controlNav a {
+	display:inline;
+	background:none;
+	text-indent:0px;
+	border:0;
+	margin-right:10px;
+	float:none;
+}
+.theme-default.controlnav-thumbs .nivo-controlNav a.active img {
+    -webkit-box-shadow: 0px 1px 5px 0px #4a4a4a;
+    -moz-box-shadow: 0px 1px 5px 0px #4a4a4a;
+    box-shadow: 0px 1px 5px 0px #4a4a4a;
+}
+.theme-default.controlnav-thumbs .nivo-controlNav img {
+	display:inline;
+	position:relative;
+	margin-right:10px;
+}
+/*
+Skin Name: Orman Theme
+Skin URI: http://nivo.dev7studios.com
+Skin Type: fixed
+Image Width: 568
+Image Height: 268
+Description: A light and green skin for the Nivo Slider.
+Version: 1.0
+Author: Gilbert Pellegrom & Orman Clark
+Author URI: http://dev7studios.com
+*/
+
+.theme-orman.slider-wrapper {
+    background:url(http://828e0c400422fe50bc7e-7be679aa2a7311928854f3608dc0ea8e.r42.cf2.rackcdn.com/wp-content/plugins/nivo-slider/scripts/nivo-slider/themes/orman/slider.png) no-repeat;
+    width:722px;
+    height:337px;
+    margin:0 auto;
+    padding-top:18px;
+    position:relative;
+}
+
+.theme-orman .nivoSlider {
+    position:relative;
+    width:568px;
+    height:268px;
+    margin-left:77px;
+    background:url(http://828e0c400422fe50bc7e-7be679aa2a7311928854f3608dc0ea8e.r42.cf2.rackcdn.com/wp-content/plugins/nivo-slider/scripts/nivo-slider/themes/orman/loading.gif) no-repeat 50% 50%;
+}
+.theme-orman .nivoSlider img {
+    position:absolute;
+    top:0px;
+    left:0px;
+    display:none;
+    width:568px; /* Make sure your images are the same size */
+    height:268px; /* Make sure your images are the same size */
+}
+.theme-orman .nivoSlider a {
+    border:0;
+    display:block;
+}
+
+.theme-orman .nivo-controlNav {
+    position:absolute;
+	left:50%;
+	bottom:-60px;
+    margin-left:-30px; /* Tweak this to center bullets */
+}
+.theme-orman .nivo-controlNav a {
+    display:block;
+    width:10px;
+    height:10px;
+    background:url(http://828e0c400422fe50bc7e-7be679aa2a7311928854f3608dc0ea8e.r42.cf2.rackcdn.com/wp-content/plugins/nivo-slider/scripts/nivo-slider/themes/orman/bullets.png) no-repeat;
+    text-indent:-9999px;
+    border:0;
+    margin-right:7px;
+    float:left;
+}
+.theme-orman .nivo-controlNav a.active {
+    background-position:0 -10px;
+}
+
+.theme-orman .nivo-directionNav a {
+	display:block;
+	width:25px;
+	height:200px;
+	background:url(http://828e0c400422fe50bc7e-7be679aa2a7311928854f3608dc0ea8e.r42.cf2.rackcdn.com/wp-content/plugins/nivo-slider/scripts/nivo-slider/themes/orman/arrows.png) no-repeat 0% 50%;
+	text-indent:-9999px;
+	border:0;
+    top:40px;
+}
+.theme-orman a.nivo-nextNav {
+	background-position:100% 50%;
+	right:-40px;
+    padding-right:20px;
+}
+.theme-orman a.nivo-prevNav {
+	left:-40px;
+    padding-left:20px;
+}
+
+.theme-orman .nivo-caption {
+    font-family: Helvetica, Arial, sans-serif;
+}
+.theme-orman .nivo-caption a { 
+    color:#fff;
+    border-bottom:1px dotted #fff;
+}
+.theme-orman .nivo-caption a:hover { 
+    color:#fff;
+}
+
+.theme-orman .ribbon {
+    background:url(http://828e0c400422fe50bc7e-7be679aa2a7311928854f3608dc0ea8e.r42.cf2.rackcdn.com/wp-content/plugins/nivo-slider/scripts/nivo-slider/themes/orman/ribbon.png) no-repeat;
+    width:111px;
+    height:111px;
+    position:absolute;
+    top:-3px;
+    left:56px;
+    z-index:300;
+}
+/*
+Skin Name: Pascal Theme
+Skin URI: http://nivo.dev7studios.com
+Skin Type: fixed
+Image Width: 630
+Image Height: 235
+Description: A nice, light skin for the Nivo Slider.
+Version: 1.0
+Author: Gilbert Pellegrom & Pascal Gartner
+Author URI: http://dev7studios.com
+*/
+
+.theme-pascal.slider-wrapper {
+    background:url(http://828e0c400422fe50bc7e-7be679aa2a7311928854f3608dc0ea8e.r42.cf2.rackcdn.com/wp-content/plugins/nivo-slider/scripts/nivo-slider/themes/pascal/slider.png) no-repeat;
+    width:668px;
+    height:299px;
+    margin:0 auto;
+    padding-top:17px;
+    position:relative;
+}
+
+.theme-pascal .nivoSlider {
+    position:relative;
+    width:630px;
+    height:235px;
+    margin-left:19px;
+    background:url(http://828e0c400422fe50bc7e-7be679aa2a7311928854f3608dc0ea8e.r42.cf2.rackcdn.com/wp-content/plugins/nivo-slider/scripts/nivo-slider/themes/pascal/loading.gif) no-repeat 50% 50%;
+}
+.theme-pascal .nivoSlider img {
+    position:absolute;
+    top:0px;
+    left:0px;
+    display:none;
+    width:630px; /* Make sure your images are the same size */
+    height:235px; /* Make sure your images are the same size */
+}
+.theme-pascal .nivoSlider a {
+    border:0;
+    display:block;
+}
+
+.theme-pascal .nivo-controlNav {
+    background:url(http://828e0c400422fe50bc7e-7be679aa2a7311928854f3608dc0ea8e.r42.cf2.rackcdn.com/wp-content/plugins/nivo-slider/scripts/nivo-slider/themes/pascal/controlnav.png) no-repeat;
+    width:251px;
+    height:40px;
+    position:absolute;
+    left:200px; /* Tweak this to center bullets */
+    bottom:-42px;
+    padding:8px 0 0 82px;
+    z-index:20;
+}
+.theme-pascal .nivo-controlNav a {
+    display:block;
+    width:22px;
+    height:22px;
+    background:url(http://828e0c400422fe50bc7e-7be679aa2a7311928854f3608dc0ea8e.r42.cf2.rackcdn.com/wp-content/plugins/nivo-slider/scripts/nivo-slider/themes/pascal/bullets.png) no-repeat;
+    text-indent:-9999px;
+    border:0;
+    margin-right:3px;
+    float:left;
+}
+.theme-pascal .nivo-controlNav a.active {
+    background-position:0 -22px;
+}
+
+.theme-pascal .nivo-directionNav a {
+	display:none;
+}
+
+.theme-pascal .nivo-caption {
+    bottom:40%;
+    left:auto;
+    right:0px;
+    width:auto;
+    max-width:630px;
+    overflow:hidden;
+    background:#fff;
+    text-shadow:none;
+    font-family: arial, serif;
+    color:#4c4b4b;
+}
+.theme-pascal .nivo-caption p {
+    padding:5px 15px;
+    color:#333;
+    font-weight:bold;
+    font-size:27px;
+    text-transform:uppercase;
+}
+.theme-pascal .nivo-caption a { 
+    color:#333;
+    font-weight:bold;
+    font-size:27px;
+    text-transform:uppercase;
+}
+
+.theme-pascal .ribbon {
+    background:url(http://828e0c400422fe50bc7e-7be679aa2a7311928854f3608dc0ea8e.r42.cf2.rackcdn.com/wp-content/plugins/nivo-slider/scripts/nivo-slider/themes/pascal/ribbon.png) no-repeat;
+    width:111px;
+    height:111px;
+    position:absolute;
+    top:-8px;
+    left:-8px;
+    z-index:300;
+}
+/*
+ * jQuery Nivo Slider v2.6
+ * http://nivo.dev7studios.com
+ *
+ * Copyright 2011, Gilbert Pellegrom
+ * Free to use and abuse under the MIT license.
+ * http://www.opensource.org/licenses/mit-license.php
+ * 
+ * March 2010
+ */
+ 
+ 
+/* The Nivo Slider styles */
+.nivoSlider {
+	position:relative;
+}
+.nivoSlider img {
+	position:absolute;
+	top:0px;
+	left:0px;
+}
+/* If an image is wrapped in a link */
+.nivoSlider a.nivo-imageLink {
+	position:absolute;
+	top:0px;
+	left:0px;
+	width:100%;
+	height:100%;
+	border:0;
+	padding:0;
+	margin:0;
+	z-index:6;
+	display:none;
+}
+/* The slices and boxes in the Slider */
+.nivo-slice {
+	display:block;
+	position:absolute;
+	z-index:5;
+	height:100%;
+}
+.nivo-box {
+	display:block;
+	position:absolute;
+	z-index:5;
+}
+/* Caption styles */
+.nivo-caption {
+	position:absolute;
+	left:0px;
+	bottom:0px;
+	background:#000;
+	color:#fff;
+	opacity:0.8; /* Overridden by captionOpacity setting */
+	width:100%;
+	z-index:8;
+}
+.nivo-caption p {
+	padding:5px;
+	margin:0;
+}
+.nivo-caption a {
+	display:inline !important;
+}
+.nivo-html-caption {
+    display:none;
+}
+/* Direction nav styles (e.g. Next & Prev) */
+.nivo-directionNav a {
+	position:absolute;
+	top:45%;
+	z-index:9;
+	cursor:pointer;
+}
+.nivo-prevNav {
+	left:0px;
+}
+.nivo-nextNav {
+	right:0px;
+}
+/* Control nav styles (e.g. 1,2,3...) */
+.nivo-controlNav a {
+	position:relative;
+	z-index:9;
+	cursor:pointer;
+}
+.nivo-controlNav a.active {
+	font-weight:bold;
+}
