@@ -14,23 +14,14 @@
  * @package WordPress
  */
 
-// ** MySQL settings - You can get this info from your web host ** //
-/** The name of the database for WordPress */
-define('DB_NAME', 'heroku_c6558b61963fc96');
+$url = parse_url('mysql://b42d2bd73e001a:21c55146@eu-cdbr-west-01.cleardb.com/heroku_c6558b61963fc96?reconnect=true');
 
-/** MySQL database username */
-define('DB_USER', 'b42d2bd73e001a');
+define('DB_HOST', $url['host']);
+define('DB_USER', $url['user']);
+define('DB_PASSWORD', $url['pass']);
+define('DB_NAME', substr($url['path'], 1));
 
-/** MySQL database password */
-define('DB_PASSWORD', '21c55146');
-
-/** MySQL hostname */
-define('DB_HOST', 'eu-cdbr-west-01.cleardb.com');
-
-/** Database Charset to use in creating database tables. */
 define('DB_CHARSET', 'utf8');
-
-/** The Database Collate type. Don't change this if in doubt. */
 define('DB_COLLATE', '');
 
 /**#@+
@@ -71,12 +62,6 @@ $table_prefix  = 'wp_';
  */
 define('WPLANG', '');
 
-define('MULTISITE', true);
-define('SUBDOMAIN_INSTALL', false);
-define('DOMAIN_CURRENT_SITE', 'localhost');
-define('PATH_CURRENT_SITE', '/wordpress/');
-define('SITE_ID_CURRENT_SITE', 1);
-define('BLOG_ID_CURRENT_SITE', 1);
 /**
  * For developers: WordPress debugging mode.
  *
