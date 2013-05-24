@@ -1,9 +1,6 @@
-
-# BEGIN WordPress
+RewriteEngine On
+RewriteBase /
 RewriteRule ^index\.php$ - [L]
-
-# uploaded files
-RewriteRule ^([_0-9a-zA-Z-]+/)?files/(.+) wp-includes/ms-files.php?file=$2 [L]
 
 # add a trailing slash to /wp-admin
 RewriteRule ^([_0-9a-zA-Z-]+/)?wp-admin$ $1wp-admin/ [R=301,L]
@@ -32,4 +29,4 @@ RewriteRule . index.php [L]
   # Make sure proxies don't deliver the wrong content
   Header append Vary User-Agent env=!dont-vary
 </IfModule>
-# END WordPress
+
