@@ -14,7 +14,7 @@
  * @package WordPress
  */
 
-define('WP_CACHE', true); //Added by WP-Cache Manager
+define('WP_CACHE', false); //Added by WP-Cache Manager
 define( 'WPCACHEHOME', '/app/www/wp-content/plugins/wp-super-cache/' ); //Added by WP-Cache Manager
 $url = parse_url('mysql://b42d2bd73e001a:21c55146@eu-cdbr-west-01.cleardb.com/heroku_c6558b61963fc96?reconnect=true');
 
