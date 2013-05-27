@@ -1,87 +1,21 @@
-
-# BEGIN WPSuperCache
-<IfModule mod_rewrite.c>
-RewriteEngine On
 RewriteBase /
-#If you serve pages from behind a proxy you may want to change 'RewriteCond %{HTTPS} on' to something more sensible
-AddDefaultCharset UTF-8
-RewriteCond %{REQUEST_URI} !^.*[^/]$
-RewriteCond %{REQUEST_URI} !^.*//.*$
-RewriteCond %{REQUEST_METHOD} !POST
-RewriteCond %{QUERY_STRING} !.*=.*
-RewriteCond %{HTTP:Cookie} !^.*(comment_author_|wordpress_logged_in|wp-postpass_).*$
-RewriteCond %{HTTP:X-Wap-Profile} !^[a-z0-9\"]+ [NC]
-RewriteCond %{HTTP:Profile} !^[a-z0-9\"]+ [NC]
-RewriteCond %{HTTP:Accept-Encoding} gzip
-RewriteCond %{HTTPS} on
-RewriteCond %{DOCUMENT_ROOT}/wp-content/cache/supercache/%{SERVER_NAME}/$1/index-https.html.gz -f
-RewriteRule ^(.*) "/wp-content/cache/supercache/%{SERVER_NAME}/$1/index-https.html.gz" [L]
 
-RewriteCond %{REQUEST_URI} !^.*[^/]$
-RewriteCond %{REQUEST_URI} !^.*//.*$
-RewriteCond %{REQUEST_METHOD} !POST
-RewriteCond %{QUERY_STRING} !.*=.*
-RewriteCond %{HTTP:Cookie} !^.*(comment_author_|wordpress_logged_in|wp-postpass_).*$
-RewriteCond %{HTTP:X-Wap-Profile} !^[a-z0-9\"]+ [NC]
-RewriteCond %{HTTP:Profile} !^[a-z0-9\"]+ [NC]
-RewriteCond %{HTTP:Accept-Encoding} gzip
-RewriteCond %{HTTPS} !on
-RewriteCond %{DOCUMENT_ROOT}/wp-content/cache/supercache/%{SERVER_NAME}/$1/index.html.gz -f
-RewriteRule ^(.*) "/wp-content/cache/supercache/%{SERVER_NAME}/$1/index.html.gz" [L]
+RewriteEngine On
+RewriteCond %{SCRIPT_FILENAME} !-d
+RewriteCond %{SCRIPT_FILENAME} !-f
+RewriteRule ^([a-zA-Z0-9-]+)$ $1.php [L]
 
-RewriteCond %{REQUEST_URI} !^.*[^/]$
-RewriteCond %{REQUEST_URI} !^.*//.*$
-RewriteCond %{REQUEST_METHOD} !POST
-RewriteCond %{QUERY_STRING} !.*=.*
-RewriteCond %{HTTP:Cookie} !^.*(comment_author_|wordpress_logged_in|wp-postpass_).*$
-RewriteCond %{HTTP:X-Wap-Profile} !^[a-z0-9\"]+ [NC]
-RewriteCond %{HTTP:Profile} !^[a-z0-9\"]+ [NC]
-RewriteCond %{HTTPS} on
-RewriteCond %{DOCUMENT_ROOT}/wp-content/cache/supercache/%{SERVER_NAME}/$1/index-https.html -f
-RewriteRule ^(.*) "/wp-content/cache/supercache/%{SERVER_NAME}/$1/index-https.html" [L]
+# Link tracker
+RewriteRule ^l/([a-zA-Z0-9/]+)$ l.php?i=$1 [L]
 
-RewriteCond %{REQUEST_URI} !^.*[^/]$
-RewriteCond %{REQUEST_URI} !^.*//.*$
-RewriteCond %{REQUEST_METHOD} !POST
-RewriteCond %{QUERY_STRING} !.*=.*
-RewriteCond %{HTTP:Cookie} !^.*(comment_author_|wordpress_logged_in|wp-postpass_).*$
-RewriteCond %{HTTP:X-Wap-Profile} !^[a-z0-9\"]+ [NC]
-RewriteCond %{HTTP:Profile} !^[a-z0-9\"]+ [NC]
-RewriteCond %{HTTPS} !on
-RewriteCond %{DOCUMENT_ROOT}/wp-content/cache/supercache/%{SERVER_NAME}/$1/index.html -f
-RewriteRule ^(.*) "/wp-content/cache/supercache/%{SERVER_NAME}/$1/index.html" [L]
-</IfModule>
+# Open tracker
+RewriteRule ^t/([a-zA-Z0-9/]+)$ t.php?i=$1 [L]
 
-# END WPSuperCache
+# Web version
+RewriteRule ^w/([a-zA-Z0-9/]+)$ w.php?i=$1 [L]
 
-# BEGIN WordPress
-RewriteRule ^index\.php$ - [L]
+# unsubscribe
+RewriteRule ^unsubscribe/(.*)$ unsubscribe.php?i=$1 [L]
 
-# add a trailing slash to /wp-admin
-RewriteRule ^([_0-9a-zA-Z-]+/)?wp-admin$ $1wp-admin/ [R=301,L]
-
-RewriteCond %{REQUEST_FILENAME} -f [OR]
-RewriteCond %{REQUEST_FILENAME} -d
-RewriteRule ^ - [L]
-RewriteRule ^([_0-9a-zA-Z-]+/)?(wp-(content|admin|includes).*) $2 [L]
-RewriteRule ^([_0-9a-zA-Z-]+/)?(.*\.php)$ $2 [L]
-RewriteRule . index.php [L]
-
-
-<FilesMatch "\.(ttf|otf|eot|woff)$">
-  <IfModule mod_headers.c>
-    Header set Access-Control-Allow-Origin "*"
-  </IfModule>
-</FilesMatch>
-
-<IfModule mod_deflate.c>
-  # Insert filter
-  SetOutputFilter DEFLATE
-
-  # Don't compress images
-  SetEnvIfNoCase Request_URI \.(?:gif|jpe?g|png)$ no-gzip dont-vary
-
-  # Make sure proxies don't deliver the wrong content
-  Header append Vary User-Agent env=!dont-vary
-</IfModule>
-# END WordPress
+# subscribe
+RewriteRule ^subscribe/(.*)$ subscribe.php?i=$1 [L]
