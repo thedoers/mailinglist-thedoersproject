@@ -2,9 +2,8 @@ ErrorDocument 404 "[404 error] If you're seeing this error after install, check 
 
 Options +FollowSymLinks
 Options -Multiviews
-<IfModule mod_rewrite.c>
+
 RewriteEngine On
-RewriteBase /
 RewriteCond %{SCRIPT_FILENAME} !-d
 RewriteCond %{SCRIPT_FILENAME} !-f
 RewriteRule ^([a-zA-Z0-9-]+)$ $1.php [L]
@@ -23,5 +22,3 @@ RewriteRule ^unsubscribe/(.*)$ unsubscribe.php?i=$1 [L]
 
 # subscribe
 RewriteRule ^subscribe/(.*)$ subscribe.php?i=$1 [L]
-
-</IfModule>

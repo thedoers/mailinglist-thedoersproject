@@ -22,14 +22,14 @@ $(document).ready(function() {
 		}
 		else
 		{
-			$("#test-send-btn").html("<i class=\"icon icon-envelope-alt\"></i> <?php echo _('Sending');?>...");
+			$("#test-send-btn").text("Sending...");
 			
 			$.post(url, { test_email: test_email, campaign_id: campaign_id },
 			  function(data) {
 			  
 			  	  $("#test-send").css("display", "none");
 			  	  $("#test-send-error").css("display", "none");
-			  	  $("#test-send-btn").html("<i class=\"icon icon-envelope-alt\"></i> <?php echo _('Test send this newsletter');?>");
+			  	  $("#test-send-btn").text("Test send this newsletter");
 			      $("#test-send").css("display", "block");
 			  }
 			);
@@ -105,14 +105,14 @@ $(document).ready(function() {
 			$("#real-btn").slideDown("fast");
 			$("#pay-btn").slideDown("fast");
 			$("#schedule-form-wrapper").slideUp("fast");
-			$("#send-later-btn").text("<?php echo _('Schedule this campaign?');?>");
+			$("#send-later-btn").text("Schedule this campaign?");
 		}
 		else
 		{
 			$("#real-btn").slideUp("fast");
 			$("#pay-btn").slideUp("fast");
 			$("#schedule-form-wrapper").slideDown("fast");
-			$("#send-later-btn").html("&larr; <?php echo _('Back');?>");
+			$("#send-later-btn").html("&larr; Back");
 		}
 	});
 	
