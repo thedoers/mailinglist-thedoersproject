@@ -1,3 +1,8 @@
+ErrorDocument 404 "[404 error] If you're seeing this error after install, check this thread on our forum for the fix: http://sendy.co/forum/discussion/5/404-error-after-install/p1"
+
+Options +FollowSymLinks
+Options -Multiviews
+
 RewriteEngine On
 RewriteCond %{SCRIPT_FILENAME} !-d
 RewriteCond %{SCRIPT_FILENAME} !-f
