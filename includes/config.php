@@ -11,7 +11,7 @@
 	$dbHost = $url['host']; //MySQL Hostname
 	$dbUser = $url['user']; //MySQL Username
 	$dbPass = $url['pass']; //MySQL Password
-	$dbName = substr($url['path'], 1)); //MySQL Database Name
+	$dbName = substr($url['path'], 1); //MySQL Database Name
 	
 	
 	//----------------------------------------------------------------------------------//	
